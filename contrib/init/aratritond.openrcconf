@@ -1,0 +1,26 @@
+# /etc/conf.d/aratritond: config file for /etc/init.d/aratritond
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/aratriton/aratriton.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/aratritond"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/aratritond.pid"
+
+# Where to write aratritond data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/aratritond"
+
+# User and group to own aratritond process
+#BITCOIND_USER="aratriton"
+#BITCOIND_GROUP="aratriton"
+
+# Path to aratritond executable
+#BITCOIND_BIN="/usr/bin/aratritond"
+
+# Nice value to run aratritond under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

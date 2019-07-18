@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Aratriton
+Comment=Aratriton P2P Cryptocurrency
+Comment[fr]=Aratriton, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Aratriton, eşten eşe kriptografik sanal para birimi
+Exec=aratriton-qt %u
+Terminal=false
+Type=Application
+Icon=aratriton128
+MimeType=x-scheme-handler/aratriton;
+Categories=Office;Finance;

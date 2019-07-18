@@ -1,0 +1,26 @@
+[Unit]
+Description=Aratriton's distributed currency daemon
+After=network.target
+
+[Service]
+User=aratriton
+Group=aratriton
+
+Type=forking
+PIDFile=/var/lib/aratritond/aratritond.pid
+
+ExecStart=/usr/bin/aratritond -daemon -pid=/var/lib/aratritond/aratritond.pid \
+          -conf=/etc/aratriton/aratriton.conf -datadir=/var/lib/aratritond
+
+ExecStop=-/usr/bin/aratriton-cli -conf=/etc/aratriton/aratriton.conf \
+         -datadir=/var/lib/aratritond stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
